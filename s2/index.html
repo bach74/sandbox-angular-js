@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" ng-app="SteakOrderModule">
+
+<head>
+  <title>Steak Shopping List Check Off</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/mine.css">
+  <script src="angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron jumbotron1">
+      <h1>Steak Shopping List Check Off</h1>
+    </div>
+
+    <div class="row">
+      <!-- To Buy List -->
+      <div class="col-md-6 clearfix" ng-controller="BuyController as bc">
+        <h2>To Buy:</h2>
+        <ul>
+          <li ng-repeat="item in bc.items">
+            Buy {{item.quantity}} {{item.name}} <button class="btn btn-default b1" ng-click="bc.bought(item)"><span class="glyphicon glyphicon-ok"></span> Bought</button>
+          </li>
+        </ul>
+        <div class="emptyMessage" ng-hide="bc.items.length">Everything is bought!</div>
+      </div>
+
+      <!-- Already Bought List -->
+      <div class="col-md-6 clearfix" ng-controller="AlreadyBoughtController as ab">
+        <h2>Already Bought:</h2>
+        <ul>
+          <li ng-repeat="item in ab.items">
+            I got {{item.quantity}} {{item.name}} <button class="btn btn-default media-left b2" ng-click="ab.notBought(item)"><span class="glyphicon glyphicon-remove"></span> Not Bought</button>
+          </li>
+        </ul>
+        <div class="emptyMessage" ng-hide="ab.items.length">Nothing bought yet.</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

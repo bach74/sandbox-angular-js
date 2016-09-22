@@ -1,0 +1,38 @@
+    .emptyMessage {
+        font-weight: bold;
+        color: red;
+        font-size: 1.2em;
+    }
+    
+    li {
+        margin-bottom: 7px;
+        font-size: 1.2em;
+        width: 80%;
+        float: right;
+    }
+    
+    li>button {
+        margin-left: 6px;
+    }
+    
+    .b1>span {
+        color: green;
+    }
+    
+    .b2>span {
+        color: red;
+    }
+    
+    .btn-default {
+        float: right;
+    }
+    
+    .jumbotron1 {
+        padding: 30px 15px;
+        margin-bottom: 30px;
+        color: inherit;
+        background-color: #f9f9f9;
+        text-align: left;
+        background-size: cover;
+        background-image: url("../img/beef-1473539_640.jpg")
+    }
