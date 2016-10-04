@@ -4,7 +4,7 @@
     angular.module('module3', ['smart-table'])
         .controller('NarrowItDownController', NarrowItDownController)
         .factory('MenuSearchItemFactory', MenuSearchItemFactory)
-        .constant('ApiBasePath', "http://davids-restaurant.herokuapp.com")
+        .constant('ApiBasePath', "https://davids-restaurant.herokuapp.com")
         .directive('foundItems', FoundItems);
 
     NarrowItDownController.$inject = ['MenuSearchItemFactory'];
