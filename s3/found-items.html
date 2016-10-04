@@ -1,0 +1,42 @@
+<div style="clear: both;">
+    <!--<ol>
+        <li ng-repeat="item in ctrl.items">
+            {{row.item}}
+            <button ng-click="ctrl.onRemove({index : $index});">Don't want this one!</button>
+        </li>
+    </ol>-->
+</div>
+
+<div style="clear: both;" ng-show="ctrl.items.length" class="bg-success">Found {{ctrl.items.length}} Items</div>
+<div style="clear: both;" ng-show="ctrl.error" class="bg-danger">Nothing found!</div>
+<table st-table="ctrl.items" class="table table-striped" ng-show="ctrl.items.length">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Short Name</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price Small</th>
+            <th>Price Large</th>
+            <th>Small Portion Name</th>
+            <th>Large Portion Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="row in ctrl.items">
+            <td>{{row.id}}</td>
+            <td>{{row.short_name}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.description}}</td>
+            <td>{{row.price_small | currency}}</td>
+            <td>{{row.price_large | currency}}</td>
+            <td>{{row.small_portion_name}}</td>
+            <td>{{row.large_portion_name}}</td>
+            <td>
+                <button type="button" ng-click="ctrl.onRemove({index : $index});" class="btn btn-sm btn-danger">
+                    <i class="glyphicon glyphicon-remove-circle"></i>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
