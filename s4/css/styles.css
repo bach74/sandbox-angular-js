@@ -1,5 +1,5 @@
 body {
-/*font-size: 1.2em;*/
+  /*font-size: 1.2em;*/
 }
 
 .error {
@@ -14,10 +14,18 @@ body {
   top: 10px;
 }
 
-li[ui-sref]:hover {
+.link a:link, a:visited, a:active {
+  text-decoration: none;
   display: inline-block;
+  color: #000;
   cursor: pointer;
-  border: solid black 1px;
   padding-left: 5px;
   padding-right: 5px;
 }
+
+.link a:hover {
+  cursor: pointer;
+  color: #0000ff;
+}
+
+
