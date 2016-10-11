@@ -1,0 +1,20 @@
+<mdt-table table-card="{visible: true, title: 'Categories'}"
+             alternate-headers="'contextual'"
+             selectable-rows="true"
+             selected-row-callback="console.log('sss');">
+
+    <mdt-header-row>
+        <mdt-column align-rule="left">ID</mdt-column>
+        <mdt-column align-rule="left">Short Name</mdt-column>
+        <mdt-column align-rule="left">Name</mdt-column>
+        <mdt-column align-rule="left">Special Instructions</mdt-column>
+        <mdt-column align-rule="left">URL</mdt-column>
+    </mdt-header-row>
+    <mdt-row ng-repeat="item in $ctrl.categoryitems">
+        <mdt-cell>{{item.id}}</mdt-cell>
+        <mdt-cell>{{item.short_name}}</mdt-cell>
+        <mdt-cell>{{item.name}}</mdt-cell>
+        <mdt-cell>{{item.special_instructions}}</mdt-cell>
+        <mdt-cell>{{item.url|linky}}</mdt-cell>
+    </mdt-row>
+</mdt-table>
