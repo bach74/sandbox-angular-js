@@ -1,0 +1,22 @@
+<mdt-table table-card="{visible: true, title: 'Details'}">
+    <mdt-header-row>
+        <!--<mdt-column align-rule="left">ID</mdt-column>-->
+        <mdt-column align-rule="left">Short Name</mdt-column>
+        <mdt-column align-rule="left">Name</mdt-column>
+        <mdt-column align-rule="left">Description</mdt-column>
+        <!--<mdt-column align-rule="left">Price Small</mdt-column>-->
+        <mdt-column align-rule="left">Price Large</mdt-column>
+        <!--<mdt-column align-rule="left">Small Portion Name</mdt-column>-->
+        <!--<mdt-column align-rule="left">Large Portion Name</mdt-column>-->
+    </mdt-header-row>
+    <mdt-row ng-repeat="item in $ctrl.itemdetails.menu_items">
+        <!--<mdt-cell>{{item.id}}</mdt-cell>-->
+        <mdt-cell>{{item.short_name}}</mdt-cell>
+        <mdt-cell>{{item.name}}</mdt-cell>
+        <mdt-cell>{{item.description}}</mdt-cell>
+        <!--<mdt-cell>{{item.price_small|currency}}</mdt-cell>-->
+        <mdt-cell>{{item.price_large|currency}}</mdt-cell>
+        <!--<mdt-cell>{{item.small_portion_name}}</mdt-cell>-->
+        <!--<mdt-cell>{{item.large_portion_name}}</mdt-cell>-->
+    </mdt-row>
+</mdt-table>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Menu App</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="css/angular-material.css" rel="stylesheet">
+	<link href="css/md-data-table-style.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body ng-app="MenuApp" ng-cloak>
+
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Menu App</h1>
+		</div>
+
+		<ui-view></ui-view>
+		<!-- Libraries -->
+	 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<!--<script src="lib/angular.min.js"></script>-->
+		<script src="lib/angular.js"></script>
+
+		<!-- Data Table -->
+		<script src="lib/angular-animate.min.js"></script>
+		<script src="lib/angular-aria.min.js"></script>
+		<script src="lib/angular-material.min.js"></script>
+		<script src="lib/angular-material-icons.min.js"></script>
+		<script src="lib/angular-sanitize.min.js"></script>
+
+		<script src="lib/md-data-table.min.js"></script>
+		
+		<script src="lib/md-data-table-templates.min.js"></script>
+		<script src="lib/lodash.min.js"></script>
+
+		<!-- Router -->
+		<script src="lib/angular-ui-router.min.js"></script>
+
+		<!-- Modules -->
+		<script src="src/menuapp/menuapp.module.js"></script>
+		<script src="src/menuapp/data.module.js"></script>
+
+		<!-- Routes -->
+		<script src="src/routes.js"></script>
+
+		<!-- 'ShoppingList' module artifacts -->
+		<script src="src/menuapp/menudata.service.js"></script>
+		<script src="src/menuapp/categories.component.js"></script>
+		<script src="src/menuapp/items.component.js"></script>
+		<script src="src/menuapp/items.controller.js"></script>
+
+</body>
+
+</html>

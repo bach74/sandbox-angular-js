@@ -1,0 +1,44 @@
+<div class="row">
+
+	<div class="col-md-12 clearfix">
+		<mdt-table 
+			sortable-columns="true"
+			animate-sort-icon="true"
+			paginated-rows="{isEnabled: true, rowsPerPageValues: [5,10,20,50]}"
+		    mdt-row-paginator="ctrl.paginatorCallback(page, pageSize)"
+    	    mdt-row-paginator-error-message="Error happened during loading nutritions."
+			table-card="{visible: true, title: 'Categories'}" 
+			mdt-row="{
+            'table-row-id-key': 'fields.item_id',
+            'column-keys': [
+                'fields.item_name',
+                'fields.nf_calories',
+                'fields.nf_total_fat',
+                'fields.nf_total_carbohydrate',
+                'fields.nf_protein',
+                'fields.nf_sodium',
+                'fields.nf_calcium_dv',
+                'fields.nf_iron_dv',
+				'details'
+            ],
+        }">
+        <mdt-header-row>
+            <mdt-column align-rule="left">Dessert (100g serving)</mdt-column>
+            <mdt-column align-rule="right">Calories</mdt-column>
+            <mdt-column align-rule="right">Fat (g)</mdt-column>
+            <mdt-column align-rule="right">Carbs (g)</mdt-column>
+            <mdt-column align-rule="right">Protein (g)</mdt-column>
+            <mdt-column align-rule="right">Sodium (mg)</mdt-column>
+            <mdt-column align-rule="right">Calcium (%)</mdt-column>
+            <mdt-column align-rule="right">Iron (%)</mdt-column>
+        </mdt-header-row>
+		<mdt-custom-cell column-key="details">
+				<span class="link" ui-sref="categories.items({itemId: value})">details</span>
+			</mdt-custom-cell>
+		</mdt-table>
+	</div>
+	<div class="col-md-12 clearfix">
+
+		<ui-view></ui-view>
+	</div>
+</div>
